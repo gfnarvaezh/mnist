@@ -83,8 +83,30 @@ window.addEventListener('load', () => {
                 if (xhr.status === 400) { result_div.innerHTML = "<h2>Please input valid text</h2>"; } 
                 else if (xhr.status === 200) { 
                     let result = JSON.parse(xhr.response);
+                    output_list = result['response']['result']
                     result_div.innerHTML = String(result['response']['result']);
                     percent_div.innerHTML = String(Math.round(result['response']['percent']*100)) + '%';
+
+                    document.getElementById("bar0").innerHTML = String(Math.round(output_list[0]*100)) + '%';
+                    document.getElementById("bar0").style.width = String(Math.round(output_list[0]*100)) + '%';
+                    document.getElementById("bar1").innerHTML = String(Math.round(output_list[1]*100)) + '%';
+                    document.getElementById("bar1").style.width = String(Math.round(output_list[1]*100)) + '%';
+                    document.getElementById("bar2").innerHTML = String(Math.round(output_list[2]*100)) + '%';
+                    document.getElementById("bar2").style.width = String(Math.round(output_list[2]*100)) + '%';
+                    document.getElementById("bar3").innerHTML = String(Math.round(output_list[3]*100)) + '%';
+                    document.getElementById("bar3").style.width = String(Math.round(output_list[3]*100)) + '%';
+                    document.getElementById("bar4").innerHTML = String(Math.round(output_list[4]*100)) + '%';
+                    document.getElementById("bar4").style.width = String(Math.round(output_list[4]*100)) + '%';
+                    document.getElementById("bar5").innerHTML = String(Math.round(output_list[5]*100)) + '%';
+                    document.getElementById("bar5").style.width = String(Math.round(output_list[5]*100)) + '%';
+                    document.getElementById("bar6").innerHTML = String(Math.round(output_list[6]*100)) + '%';
+                    document.getElementById("bar6").style.width = String(Math.round(output_list[6]*100)) + '%';
+                    document.getElementById("bar7").innerHTML = String(Math.round(output_list[7]*100)) + '%';
+                    document.getElementById("bar7").style.width = String(Math.round(output_list[7]*100)) + '%';
+                    document.getElementById("bar8").innerHTML = String(Math.round(output_list[8]*100)) + '%';
+                    document.getElementById("bar8").style.width = String(Math.round(output_list[8]*100)) + '%';
+                    document.getElementById("bar9").innerHTML = String(Math.round(output_list[9]*100)) + '%';
+                    document.getElementById("bar9").style.width = String(Math.round(output_list[9]*100)) + '%';
                 } 
                 else { result_div.innerHTML = "<h2>Error</h2>"; }
             }
