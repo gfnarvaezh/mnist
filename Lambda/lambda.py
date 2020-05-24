@@ -14,9 +14,8 @@ def json_to_numpy_array(event):
             except:
                 array[0, x, y] = 0
             pixel += 1
-    return array
+    return array / 255.0
     
-    array = array / 255.0
 def lambda_handler(event, context):
     
     array = json_to_numpy_array(event)
